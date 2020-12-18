@@ -1,35 +1,10 @@
-// @use './base/reset';
-// @use './base/fonts';
-// @use './base/variables' as *;
-// @use './base/mixins' as *;
+@use './base/reset';
+@use './base/fonts';
+@use './base/variables' as *;
+@use './base/mixins' as *;
 
-// @import "../../icons/style.css";
+@import "../../icons/style.css";
 
 body {
-  background-color: yellow;
-  h1 {
-    color: white;
-    background-color: purple;
-  }
-  h2 {
-    color: purple;
-    background-color: white;
-  }
-  h3 {
-    font-size: 40px;
-    background-color: white;
-    color: green;
-  }
-  h4 {
-    font-size: 50px;
-    background-color: black;
-    color: peru;
-  }
-  button {
-    display: flex;
-    align-items: center;
-    font-size: 20px;
-    color: red;
-    background-color: #fff;
-  }
+  background-color: $bruin;
 }

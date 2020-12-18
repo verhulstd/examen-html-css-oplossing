@@ -6,6 +6,13 @@
   }
 }
 
+@mixin font($ff, $fw, $c, $fs: 14px) {
+  font-family: $ff;
+  font-weight: $fw;
+  color: $c;
+  font-size: $fs;
+}
+
 @mixin make-col($cols, $gap) {
   display: flex;
   flex-wrap: wrap;
