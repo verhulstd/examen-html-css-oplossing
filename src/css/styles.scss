@@ -5,6 +5,60 @@
 
 @import "../../icons/style.css";
 
-body {
-  background-color: $bruin;
+.container {
+  max-width: 1171px;
+  width: 90%;
+  margin: 0 auto;
+  min-height: 100px;
+}
+
+header {
+  min-height: 100vh;
+  background-image: url("../../images/background.jpg");
+  background-size: cover;
+  background-position: top center;
+  .container {
+    display: flex;
+    padding-top: 39px;
+    align-items: center;
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 58px;
+      color: $wit;
+      text-decoration: none;
+      span {
+        @include font($raleway, 400, $wit, 34px);
+        margin-left: 26px;
+      }
+    }
+    nav {
+      margin-left: auto;
+      margin-right: 85px;
+      ul {
+        display: flex;
+        li {
+          margin: 0 13px;
+          a {
+            padding: 10px;
+            @include font($montserrat, 300, $wit, 14px);
+            text-decoration: none;
+            transition: color 250ms;
+            &.active,
+            &:hover {
+              color: #c7b299;
+            }
+          }
+        }
+      }
+    }
+    .search {
+      color: $wit;
+      font-size: 27px;
+    }
+  }
+}
+main {
+  min-height: 250px;
+  background-color: $wit;
 }
