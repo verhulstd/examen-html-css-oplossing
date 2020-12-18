@@ -13,6 +13,7 @@
 }
 
 header {
+  position: relative;
   min-height: 100vh;
   background-image: url("../../images/background.jpg");
   background-size: cover;
@@ -55,6 +56,78 @@ header {
     .search {
       color: $wit;
       font-size: 27px;
+    }
+  }
+  .slider {
+    text-align: center;
+    width: 580px;
+    margin: 0 auto;
+    margin-top: 270px;
+    h2 {
+      @include font($raleway, 500, $wit, 36px);
+      margin-bottom: 9px;
+    }
+    h1 {
+      @include font($raleway, 800, $wit, 52px);
+      margin-bottom: 18px;
+    }
+    p {
+      @include font($montserrat, 300, $wit, 16px);
+      margin-bottom: 45px;
+      line-height: 24px;
+    }
+    button {
+      @include font($raleway, 800, $wit, 14px);
+      background-color: $bruin;
+      height: 50px;
+      outline: none;
+      line-height: 50px;
+      border-radius: 3px;
+      padding: 0 50px;
+      border-width: 0px;
+      cursor: pointer;
+      text-transform: uppercase;
+      //border-bottom: 3px solid $donkerbruin;
+      box-shadow: 0 3px $donkerbruin;
+    }
+    a.left,
+    a.right {
+      color: $bruin;
+      font-size: 75px;
+      position: absolute;
+      left: 150px;
+      top: calc(50% - 37.5px);
+    }
+    a.right {
+      left: auto;
+      right: 150px;
+    }
+    .sliderNav {
+      display: flex;
+      justify-content: space-around;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 40px;
+      ul {
+        display: flex;
+        li {
+          a {
+            background-color: rgba($donkerbruin, 0.5);
+            width: 10px;
+            text-decoration: none;
+            height: 10px;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            display: block;
+            &.active,
+            &:hover {
+              border-color: $donkerbruin;
+            }
+          }
+          margin: 0 4px;
+        }
+      }
     }
   }
 }
