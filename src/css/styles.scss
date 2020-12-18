@@ -9,7 +9,6 @@
   max-width: 1171px;
   width: 90%;
   margin: 0 auto;
-  min-height: 100px;
 }
 
 header {
@@ -134,4 +133,36 @@ header {
 main {
   min-height: 250px;
   background-color: $wit;
+  .container {
+    @include make-col(4, 28px);
+    padding: 80px 0px;
+    article {
+      text-align: center;
+      font-size: 50px;
+      color: $grijs;
+      position: relative;
+      &.active,
+      &:hover {
+        color: $donkerbruin;
+      }
+      &:after {
+        content: "";
+        bottom: -30px;
+        height: 4px;
+        background-color: $bruin;
+        position: absolute;
+        width: 70px;
+        left: calc(50% - 35px);
+      }
+      h2 {
+        @include font($raleway, 600, $bruin, 22px);
+        margin-top: 27px;
+        margin-bottom: 20px;
+      }
+      p {
+        @include font($montserrat, 300, $lichtgrijs, 14px);
+        line-height: 24px;
+      }
+    }
+  }
 }
